@@ -5,8 +5,8 @@
 
 trigger:
 - master
-
 variables:
+  environtment:
   # Azure Resource Manager connection created during pipeline creation
   azureServiceConnectionId: 'ce5f1035-9994-4795-b8c7-da56a5f384ba'
 
@@ -80,7 +80,7 @@ stages:
             displayName: 'Use Python version'
 
           - task: AzureWebApp@1
-            displayName: 'Deploy Azure Web App : '
+            displayName: 'Deploy Azure Web App : 
             inputs:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
