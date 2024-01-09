@@ -85,3 +85,6 @@ stages:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
+          
+          - task: PyPIPublisher@0
+            inputs:
